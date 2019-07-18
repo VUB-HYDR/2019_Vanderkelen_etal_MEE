@@ -5,8 +5,8 @@ Data analysis and modelling used in Vanderkelen et al., 2019.
 
 ## For users
 This repository includes the processing and plotting scripts used in Vanderkelen et al, 2019. 
-The raw EURO-CORDEX output is processed using the bash scripts in the 'bash_scripts' folder. 
-THe data analysis and plotting is done with matlab, checkout the 'main' script for an overview. 
+The raw EURO-CORDEX output is processed using the bash scripts in the [bash_scripts](/bash_scripts) folder. 
+THe data analysis and plotting is done with matlab, checkout the [main](main.m) script for an overview. 
 
 ## Versions
 Version 0.1.0 - April 2018  
