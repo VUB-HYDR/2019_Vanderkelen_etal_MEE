@@ -1,4 +1,4 @@
-# 2019_Vanderkelen_et_al_BG
+# 2019_Vanderkelen_et_al_GI
 
 Data analysis and modelling used in Vanderkelen et al., 2019. 
 
@@ -17,5 +17,5 @@ This project is licensed under the MIT License. See also the
 file.
 
 ## References
-Vanderkelen, I., Zschleischler, J., Gudmundsson, L., Keuler, K., Rineau, F., Beenaerts, N., Vangronsveld, J., Thiery, W. A new approach for assessing climate change impacts in ecotron experiments, submitted to Biogeosciences.    
+Vanderkelen, I., Zschleischler, J., Gudmundsson, L., Keuler, K., Rineau, F., Beenaerts, N., Vangronsveld, J., Thiery, W. A new approach for assessing climate change impacts in ecotron experiments, submitted to Geoscientific Instrumentation, Methods and Data-Systems.     
 
