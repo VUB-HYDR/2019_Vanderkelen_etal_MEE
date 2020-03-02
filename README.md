@@ -17,5 +17,5 @@ This project is licensed under the MIT License. See also the
 file.
 
 ## References
-Vanderkelen, I., Zschleischler, J., Gudmundsson, L., Keuler, K., Rineau, F., Beenaerts, N., Vangronsveld, J., Thiery, W. A new approach for assessing climate change impacts in ecotron experiments, submitted to Geoscientific Instrumentation, Methods and Data-Systems.     
+Vanderkelen, I., Zschleischler, J., Gudmundsson, L., Keuler, K., Rineau, F., Beenaerts, N., Vangronsveld, J., Thiery, W. A novel method for assessing climate change impacts in ecotron experiments, submitted to Geoscientific Instrumentation, Methods and Data-Systems.     
 
