@@ -1,6 +1,6 @@
 # 2019_Vanderkelen_et_al_GI
 
-Data analysis and modelling used in Vanderkelen et al., 2019. 
+Data analysis and modelling used in Vanderkelen et al., 2020. 
 
 
 ## For users
