@@ -1,4 +1,4 @@
-# 2020_Vanderkelen_et_al_IntJBiometeorol
+# 2020_Vanderkelen_et_al_IJBM
 
 Data analysis and modelling used in Vanderkelen et al., 2020. 
 
