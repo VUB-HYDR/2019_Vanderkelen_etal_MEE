@@ -32,18 +32,34 @@ tasmax_seas_month(find(tasmax_seas_month==0))=NaN;
 
 figure('rend','painters','pos',[10 10 900 600]);
 ax = mf_subtightplot(2,2,1,[0.1,0.1],[0.05,0.05],[0.08,0.25]);
-mf_plot_seascycle(tas_seas_month,TAS_seas_month,'Mean temperature', length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Temperature (K)','hist',0,'south')
+mf_plot_seascycle(tas_seas_month-273.16,TAS_seas_month-273.16,' ', length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Air Temperature (^{\circ}C)','hist',0,'south')
 ax = mf_subtightplot(2,2,2,[0.1,0.1],[0.05,0.05],[0.02,0.27] );
-mf_plot_seascycle(pr_seas_month ,PR_seas_month,'Precipitation',length(RCM_all),  strcat(RCM_text,GCM_text), 'month', 'Precipitation (mm)','hist',0,'northeastoutside')
+mf_plot_seascycle(pr_seas_month ,PR_seas_month,' ',length(RCM_all),  strcat(RCM_text,GCM_text), 'month', 'Precipitation (mm)','hist',0,'northeastoutside')
 
 
 ax = mf_subtightplot(2,2,3,[0.1,0.1],[0.05,0.05],[0.08,0.25]);
-mf_plot_seascycle(rh_seas_month,HURS_seas_month,' Relative humidity', length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Relative humidity (%)','hist',0,'southwest')
+mf_plot_seascycle(rh_seas_month,HURS_seas_month,'  ', length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Relative Humidity (%)','hist',0,'southwest')
 ax = mf_subtightplot(2,2,4,[0.1,0.1],[0.05,0.05],[0.02,0.27]);
-mf_plot_seascycle(sfcWind_seas_month,SFCWIND_seas_month,'Mean Surface Wind', length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Wind (m/s)','hist',1,'north')
+mf_plot_seascycle(sfcWind_seas_month,SFCWIND_seas_month,' ', length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Surface Wind (m/s)','hist',0,'eastoutside')
+
+
+% save figure
+filename = strcat('seascycle_hist');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\paper'; 
+print(fullfile(pathname, filename),'-dtiff','-r1000')
+
 
 figure()
 subplot(1,2,1)
 mf_plot_seascycle(tasmin_seas_month,TASMIN_seas_month,'Minimum daily temperature', length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Temperature (K)','hist',0,'south')
 subplot(1,2,2)
-mf_plot_seascycle(tasmax_seas_month,TASMAX_seas_month,'Maximum daily temperature',length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Temperature (K)','hist',0,'south')
+mf_plot_seascycle(tasmax_seas_month,TASMAX_seas_month,'Maximum daily temperature',length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Temperature (K)','hist',1,'eastoutside')
+
+figure()
+mf_plot_seascycle(tasmax_seas_month,TASMAX_seas_month,'Maximum daily temperature',length(RCM_all), strcat(RCM_text,GCM_text), 'month', 'Temperature (K)','hist',1,'eastoutside')
+filename = strcat('legend');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\paper'; 
+print(fullfile(pathname, filename),'-dtiff','-r1000')
+
+
+

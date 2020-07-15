@@ -25,28 +25,28 @@ end
 % filtering of data
 perf_smoothing
 
-figure('rend','painters','pos',[10 10 900 600]);
+figure('rend','painters','pos',[10 10 950 800]);
 
 % temperature
 ax = mf_subtightplot(3,2,1,[0.08 0.08]);
 
 for i = length(periods):-1:1
-    plot(tas_smoothed(:,i),'LineWidth',1,'Color',cmap_tas(i,:))
+    plot(tas_smoothed(:,i)-276.13,'LineWidth',1,'Color',cmap_tas(i,:))
     hold on
 end
 hold off
 
 % plot specifics
 xlim([1 length(tas_extr)])
-ylim([270 302])
+ylim([-6 25])
 grid on
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','ycolor', axcolor)
 set(gca,'XTick',xtick, 'XTickLabel', 1:5,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
-%legend('+ 4° C','+ 3° C','+ 2° C', '+ 1.5° C','+ 1° C', '+ 0° C')
+%legend('+ 4 ^{\circ}C','+ 3 ^{\circ}C','+ 2 ^{\circ}C', '+ 1.5 ^{\circ}C','+ 1 ^{\circ}C', '+ 0 ^{\circ}C')
 %set(legend, 'TextColor', axcolor, 'location','westoutside', 'Box', 'off')
-title('Daily mean temperature', 'Color',axcolor)
-ylabel('T (K)')
+title(' ', 'Color',axcolor)
+ylabel('Mean Air Temperature (^{\circ}C)')
 
 
 % precipitation 
@@ -64,8 +64,8 @@ grid on
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','ycolor', axcolor)
 set(gca,'XTick',xtick, 'XTickLabel', 1:5,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
-title('Precipitation', 'Color',axcolor)
-ylabel('P (mm/day)')
+title(' ', 'Color',axcolor)
+ylabel('Precipitation (mm/day)')
 
 
 % rh
@@ -85,8 +85,8 @@ grid on
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','ycolor', axcolor)
 set(gca,'XTick',xtick, 'XTickLabel', 1:5,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
-title('Relative Humidity', 'Color',axcolor)
-ylabel('RH (%)')
+title(' ', 'Color',axcolor)
+ylabel('Relative Humidity (%)')
 
 
 
@@ -107,29 +107,29 @@ grid on
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','ycolor', axcolor)
 set(gca,'XTick',xtick, 'XTickLabel', 1:5,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
-title('Surface wind', 'Color',axcolor)
-ylabel('Wind (m/s)')
+title(' ', 'Color',axcolor)
+ylabel('Surface Wind (m/s)')
 
 
 % maxtemperature
 ax = mf_subtightplot(3,2,5,[0.08 0.08]);
 
 for i = 1:length(periods)
-    plot(tasmax_smoothed(:,i),'LineWidth',1,'Color',cmap_tas(i,:))
+    plot(tasmax_smoothed(:,i)-276.13,'LineWidth',1,'Color',cmap_tas(i,:))
     hold on
 end
 hold off
 
 %plot specifics
 xlim([1 length(tas_extr)])
-ylim([270 302])
+ylim([-6 25])
 grid on
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','ycolor', axcolor)
 set(gca,'XTick',xtick, 'XTickLabel', 1:5,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 xlabel('Years')
-title('Daily maximum temperature', 'Color',axcolor)
-ylabel('T (K)')
+title(' ', 'Color',axcolor)
+ylabel('Max Air Temperature (^{\circ}C)')
 %ylim([-14 14])
 
 
@@ -138,21 +138,24 @@ ylabel('T (K)')
 ax = mf_subtightplot(3,2,6,[0.08 0.08]);
 
 for i = 1:length(periods)
-    plot(tasmin_smoothed(:,i),'LineWidth',1,'Color',cmap_tas(i,:))
+    plot(tasmin_smoothed(:,i)-276.13,'LineWidth',1,'Color',cmap_tas(i,:))
     hold on
 end
 hold off
 
 %plot specifics
 xlim([1 length(tas_extr)])
-ylim([270 302])
+ylim([-6 25])
 grid on
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 12, 'Fontweight', 'Bold','ycolor', axcolor)
 set(gca,'XTick',xtick, 'XTickLabel', 1:5,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 xlabel('Years')
-title('Daily minimum temperature','Color',axcolor)
-ylabel('T (K)')
+title(' ','Color',axcolor)
+ylabel('Min Air Temperature (^{\circ}C)')
 %ylim([-14 14])
 
+filename = strcat('var_per_ectr_anom2_legend');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\paper'; 
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 

@@ -9,7 +9,7 @@ close all
 ms_inicon
 
 % add matlab scripts to directory path
-addpath(genpath('/home/inne/documents/sideprojects/ecotrons')); 
+addpath(genpath('C:\Users\ivand\Downloads\Documents\ecotrons\')); 
 
 
 % initialisation

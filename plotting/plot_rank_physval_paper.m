@@ -24,15 +24,22 @@ axcolor = [0.3 0.3 0.3];
 load seas_rankings_eval
 load seasvar_names_eval 
 
-figure('rend','painters','pos',[10 10 1200 400]);
 
+seasvar_names{1,1} = {'DTR (7.9 ^{\circ}C)'}; 
+seasvar_names{1,2} = {'DTR winter (5.4 ^{\circ}C)'}; 
+seasvar_names{1,3} = {'DTR summer (9.8 ^{\circ}C)'}; 
+
+seasvar_str = string(seasvar_names)
+
+
+figure('rend','painters','pos',[10 10 1250 450]);
 
 % plotting
 ax1 = mf_subtightplot(1,2,1,[0.01,0.03],[0.32 0.1],[0.15 0.16]);
 imagesc(ax1,seas_rankings_eval,'AlphaData',~isnan(seas_rankings_eval))
 set(ax1,'XTick',[1:9],'XtickLabel',RCM,'XTickLabelRotation',45,...
     'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
-set(ax1,'YTick',[1:length(seas_rankings_eval)],'YtickLabel',seasvar_names,...
+set(ax1,'YTick',[1:length(seas_rankings_eval)],'YtickLabel',seasvar_str,...
     'Fontsize', lsize, 'Fontweight', 'Bold','ycolor', axcolor,'TickLength',[0 0])
 colormap(cmap_7)
 c = colorbar;
@@ -65,3 +72,8 @@ colorbar('Ticks',[2.2 4.15 6.1 8 9.9 11.9 13.8 15.7 17.7], 'TickLabels', [2:2:18
 title('Historical simulations',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 set(gca,'color',[0.8 0.8 0.8]);
+
+
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\ranking'; 
+filename = strcat('ranking_physval');
+print(fullfile(pathname, filename),'-dtiff','-r1000')

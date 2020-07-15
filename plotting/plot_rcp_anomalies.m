@@ -136,7 +136,7 @@ prctile_sfcWind = prctile(mean_sfcWind',[25 50 75])
 close all
 
 % define model to plot
-sel  = [11]; 
+sel  = [4]; 
 lsize = 11; 
 tsize = 16; 
 
@@ -180,8 +180,8 @@ legend(model,'Box','off')
 
 set(legend,'Fontweight', 'Bold','Fontsize', lsize, 'TextColor', axcolor,'Location','northwest');
 xlim([1 94]) 
-ylabel('Temperature anomaly (K)','Fontsize', lsize, 'Fontweight', 'Bold', 'color', axcolor)
-title('Mean temperature anomaly ','Fontsize', tsize, 'Fontweight', 'Bold', 'color', axcolor)
+ylabel('\Delta Air Temperature (^{\circ}C)','Fontsize', lsize, 'Fontweight', 'Bold', 'color', axcolor)
+title(' ','Fontsize', tsize, 'Fontweight', 'Bold', 'color', axcolor)
 set(gca, 'Fontsize', lsize, 'Fontweight', 'Bold','Xcolor', axcolor,...
    'Ycolor', axcolor,'xtick',label_loc10,'xticklabel',year_labels10,'xticklabelrotation',45); 
 grid on
@@ -218,8 +218,8 @@ hold off
 %set(legend,'Fontweight', 'Bold','Fontsize', 16, 'TextColor', axcolor,'Location','best');
 xlim([1 94]) 
 %ylim([1 5])
-ylabel('Precipitation anomaly (mm/day)','Fontsize', lsize, 'Fontweight', 'Bold', 'color', axcolor)
-title('Precipitation anomaly','Fontsize', tsize, 'Fontweight', 'Bold', 'color', axcolor)
+ylabel('\Delta Precipitation (mm/day)','Fontsize', lsize, 'Fontweight', 'Bold', 'color', axcolor)
+title(' ','Fontsize', tsize, 'Fontweight', 'Bold', 'color', axcolor)
 set(gca, 'Fontsize', lsize, 'Fontweight', 'Bold','Xcolor', axcolor,...
    'Ycolor', axcolor,'xtick',label_loc10,'xticklabel',year_labels10,'xticklabelrotation',45); 
 grid on
@@ -254,8 +254,8 @@ hold off
 %set(legend,'Fontweight', 'Bold','Fontsize', 16, 'TextColor', axcolor,'Location','best');
 xlim([1 94]) 
 %ylim([65 95])
-ylabel('Relative humidity anomaly (%)','Fontsize', lsize, 'Fontweight', 'Bold', 'color', axcolor)
-title('Relative humidity anomaly ','Fontsize', tsize, 'Fontweight', 'Bold', 'color', axcolor)
+ylabel('\Delta Relative Humidity (%)','Fontsize', lsize, 'Fontweight', 'Bold', 'color', axcolor)
+title(' ','Fontsize', tsize, 'Fontweight', 'Bold', 'color', axcolor)
 set(gca, 'Fontsize', lsize, 'Fontweight', 'Bold','Xcolor', axcolor,...
    'Ycolor', axcolor,'xtick',label_loc10,'xticklabel',year_labels10,'xticklabelrotation',45); 
 grid on
@@ -291,13 +291,13 @@ hold off
 %legend(strcat(RCM_text(selection),GCM_text(selection)),'Multimodel mean')
 %set(legend,'Fontweight', 'Bold','Fontsize', 16, 'TextColor'(, axcolor,'Location','best');
 xlim([1 94]) 
-ylabel('Wind anomaly (m/s)','Fontsize', lsize, 'Fontweight', 'Bold', 'color', axcolor)
-title('Surface wind speed anomaly','Fontsize', tsize, 'Fontweight', 'Bold', 'color', axcolor)
+ylabel('\Delta Surface Wind (m/s)','Fontsize', lsize, 'Fontweight', 'Bold', 'color', axcolor)
+title(' ','Fontsize', tsize, 'Fontweight', 'Bold', 'color', axcolor)
 set(gca, 'Fontsize', lsize, 'Fontweight', 'Bold','Xcolor', axcolor,...
    'Ycolor', axcolor,'xtick',label_loc10,'xticklabel',year_labels10,'xticklabelrotation',45); 
 grid on
 
 % save figure
-filename = strcat('rcp85_',RCM(sel(i)),'_',GCM_text(sel(i)),'_anom.png');
-pathname = '/home/inne/documents/sideprojects/ecotrons/paper/Copernicus_LaTeX_Package/figures'; 
-saveas(figure1,fullfile(pathname, filename{1}))
+filename = strcat('rcp85_',RCM(sel(i)),'_',GCM_text(sel(i)),'_anom');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\paper'; 
+print(fullfile(pathname, filename{1}),'-dtiff','-r1000')

@@ -172,17 +172,21 @@ HURS_seas_month_hs = mf_calc_seascycle(HURS_hs,date_eval,'month')';
 %% plot
 figure('rend','painters','pos',[10 10 900 600]);
 ax = mf_subtightplot(2,2,1,[0.1,0.1],[0.05,0.05],[0.08,0.08])
-mf_plot_seascycle_stdata(TAS_seas_month_ms,TAS_seas_month_aa,TAS_seas_month_hs,'Mean temperature','month','T (K)',0)
+mf_plot_seascycle_stdata(TAS_seas_month_ms-273.16,TAS_seas_month_aa-273.16,TAS_seas_month_hs-273.16,' ','month','Air Temperature (^\circC)',0)
 
 ax = mf_subtightplot(2,2,2,[0.1,0.1],[0.05,0.05],[0.08,0.08] )
-mf_plot_seascycle_stdata(PR_seas_month_ms,PR_seas_month_aa,PR_seas_month_hs,'Precipitation','month','P (mm/day)',1)
+mf_plot_seascycle_stdata(PR_seas_month_ms,PR_seas_month_aa,PR_seas_month_hs,' ','month','Precipitation (mm/day)',1)
 ylim([1 4.5])
 
 ax = mf_subtightplot(2,2,3,[0.1,0.1],[0.05,0.05],[0.08,0.08])
-mf_plot_seascycle_stdata(HURS_seas_month_ms,HURS_seas_month_aa,HURS_seas_month_hs,'Relative humidity','month','RH (%)',0)
+mf_plot_seascycle_stdata(HURS_seas_month_ms,HURS_seas_month_aa,HURS_seas_month_hs,' ','month','Relative Humidity (%)',0)
 ylim([60 95])
 
 ax = mf_subtightplot(2,2,4,[0.1,0.1],[0.05,0.05],[0.08,0.08])
-mf_plot_seascycle_stdata(SFCWIND_seas_month_ms,SFCWIND_seas_month_aa,0,'Mean surface wind','month','Wind (m/s)',0)
+mf_plot_seascycle_stdata(SFCWIND_seas_month_ms,SFCWIND_seas_month_aa,0,' ','month','Surface Wind (m/s)',0)
 ylim([1 7])
 
+% save figure
+filename = strcat('stat_data');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\paper\'; 
+print(fullfile(pathname, filename),'-djpeg','-r1000')

@@ -1,6 +1,6 @@
 # 2019_Vanderkelen_et_al_BG
 
-Data analysis and modelling used in Vanderkelen et al., 2019. 
+Data analysis and modelling used in Vanderkelen et al., 2020. 
 
 
 ## For users
@@ -9,7 +9,7 @@ The raw EURO-CORDEX output is processed using the bash scripts in the [bash_scri
 THe data analysis and plotting is done with matlab, checkout the [main](main.m) script for an overview. 
 
 ## Versions
-Version 0.1.0 - April 2018  
+Version 0.2.0 - June 2020  
 
 ## License
 This project is licensed under the MIT License. See also the 
@@ -17,5 +17,5 @@ This project is licensed under the MIT License. See also the
 file.
 
 ## References
-Vanderkelen, I., Zschleischler, J., Gudmundsson, L., Keuler, K., Rineau, F., Beenaerts, N., Vangronsveld, J., Thiery, W. A new approach for assessing climate change impacts in ecotron experiments, submitted to Biogeosciences.    
+Vanderkelen, I., Zschleischler, J., Gudmundsson, L., Keuler, K., Rineau, F., Beenaerts, N., Vangronsveld, J., Thiery, W. A novel method for assessing climate change impacts in ecotron experiments, International Journal of Biometeorology, 2020, in press.   
 

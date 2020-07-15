@@ -42,14 +42,14 @@ colormap(cmap_9)
 c = colorbar;
 colorbar('Ticks',[1.4 2.35 3.2 4.1 5 5.85 6.8 7.7 8.5], 'TickLabels', [1:9],...
     'Fontsize', lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
-title('Mean daily temperature',...
+title('Air Temperature',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 set(gca,'color',[0.8 0.8 0.8]);
 
 % save figure
-filename = strcat('ranking_tas.png');
-pathname = '/home/inne/documents/sideprojects/ecotrons/scripts/matlab/plots/ranking'; 
-saveas(figure1,fullfile(pathname, filename))
+filename = strcat('ranking_tas');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\ranking'; 
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 
 %% pr
 
@@ -81,11 +81,11 @@ set(gca,'color',[0.8 0.8 0.8]);
 c = colorbar;
 colorbar('Ticks',[1.4 2.35 3.2 4.1 5 5.85 6.8 7.7 8.5], 'TickLabels', [1:9],...
      'Fontsize', lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
-title('Mean daily precipitation',...
+title('Precipitation',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 
-filename = strcat('ranking_pr.png');
-saveas(figure2,fullfile(pathname, filename))
+filename = strcat('ranking_pr');
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 
 
 %% rh
@@ -118,13 +118,13 @@ colormap(cmap_7)
 c = colorbar;
 colorbar('Ticks',[1.4 2.3 3.2 4 4.9 5.7 6.6], 'TickLabels', [1:7],...
     'Fontsize', lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
-title('Mean daily relative humidity',...
+title('Relative Humidity',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 set(gca,'color',[0.8 0.8 0.8]);
 
 
-filename = strcat('ranking_rh.png');
-saveas(figure3,fullfile(pathname, filename))
+filename = strcat('ranking_rh');
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 %% sfcWind
 
 % merge score rankings (opposite order)
@@ -154,11 +154,11 @@ set(ax,'XTick',[0],'XtickLabel',RCM,'XTickLabelRotation',45,...
  c = colorbar;
  colorbar('Ticks',[1.4 2.3 3.2 4 4.9 5.7 6.6], 'TickLabels', [1:7],...
      'Fontsize', lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
-title('Mean daily surface wind speed',...
+title('Surface Wind',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 
-filename = strcat('ranking_sfcWind.png');
-saveas(figure4,fullfile(pathname, filename))
+filename = strcat('ranking_sfcWind');
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 %% plot seasonal cycle ranking
 % 
 % % merge score rankings (opposite order)

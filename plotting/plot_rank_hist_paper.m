@@ -43,13 +43,13 @@ colorbar('Ticks',[2.2 4.15 6.1 8 9.9 11.9 13.8 15.7 17.7], 'TickLabels', [2:2:18
     'Fontsize',lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
 % colorbar('Ticks',[1.2 2.2 3.25 4.15 5.15 6.1 7.1 8 9 9.9 10.95 11.9 12.8 13.8 14.8 15.7 16.7 17.7], 'TickLabels', [1:18],...
 %     'Fontsize',lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
-title('Mean daily temperature',...
+title('Air Temperature',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 
 % save figure
-filename = strcat('ranking_hist_tas.png');
-pathname = '/home/inne/documents/sideprojects/ecotrons/scripts/matlab/plots/ranking'; 
-saveas(figure1,fullfile(pathname, filename))
+filename = strcat('ranking_hist_tas');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\ranking'; 
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 
 %% pr
 
@@ -76,13 +76,13 @@ colormap(cmap_18)
 c = colorbar;
 colorbar('Ticks',[2.2 4.15 6.1 8 9.9 11.9 13.8 15.7 17.7], 'TickLabels', [2:2:18],...
     'Fontsize', lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
-title('Mean daily precipitation',...
+title('Precipitation',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 set(gca,'color',[0.8 0.8 0.8]);
 
 % save figure
-filename = strcat('ranking_hist_pr.png');
-saveas(figure2,fullfile(pathname, filename))
+filename = strcat('ranking_hist_pr');
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 
 
 %% rh
@@ -111,14 +111,14 @@ colormap(cmap_18)
 c = colorbar;
 colorbar('Ticks',[1.2 3.25  5.15 7.1  9  10.95  12.8  14.8  16.7 ], 'TickLabels', [1:2:17],...
     'Fontsize', lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
-title('Mean daily relative humidity',...
+title('Relative Humidity',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 set(gca,'color',[0.8 0.8 0.8]);
 
 
 % save figure
-filename = strcat('ranking_hist_rh.png');
-saveas(figure3,fullfile(pathname, filename))
+filename = strcat('ranking_hist_rh');
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 %% sfcWind
 
 % merge score rankings (opposite order)
@@ -147,11 +147,11 @@ c = colorbar;
 
 % colorbar('Ticks',[1.4 2.3 3.3 4.2 5.2 6.1 7.2 8 9 10 10.9 11.8 12.8 13.7 14.7 15.6 ], 'TickLabels', [1:16],...
 %     'Fontsize', lsize, 'Fontweight', 'Bold','Color', axcolor,'TickLength',0)
-title('Mean daily surface wind speed',...
+title('Surface Wind',...
     'Fontsize', tsize, 'Fontweight', 'Bold','Color', axcolor)
 set(gca,'color',[0.8 0.8 0.8]);
 
 % save figure
-filename = strcat('ranking_hist_sfcWind.png');
-saveas(figure4,fullfile(pathname, filename))
+filename = strcat('ranking_hist_sfcWind');
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 

@@ -33,19 +33,28 @@ tasmax_seas_month(find(tasmax_seas_month==0))=NaN;
 
 figure('rend','painters','pos',[10 10 900 600]);
 ax = mf_subtightplot(2,2,1,[0.1,0.1],[0.05,0.05],[0.08,0.15])
-mf_plot_seascycle(tas_seas_month,TAS_seas_month,'Mean temperature ', nm, RCM, 'month', 'Temperature (K)','eval',0,'south')
+mf_plot_seascycle(tas_seas_month-273.16,TAS_seas_month-273.16,'  ', nm, RCM, 'month', 'Air Temperature (^{\circ}C)','eval',0,'south')
+ylim([0 21])
 
 ax = mf_subtightplot(2,2,2,[0.1,0.1],[0.05,0.05],[0.08,0.18] )
-mf_plot_seascycle(pr_seas_month ,PR_seas_month,'Precipitation',nm,  RCM, 'month', 'Precipiation (mm/day)','eval',0,'northeastoutside')
+mf_plot_seascycle(pr_seas_month ,PR_seas_month,' ',nm,  RCM, 'month', 'Precipiation (mm/day)','eval',0,'northeastoutside')
 
 ax = mf_subtightplot(2,2,3,[0.1,0.1],[0.05,0.05],[0.08,0.15])
-mf_plot_seascycle(rh_seas_month,HURS_seas_month,'Relative humidity', nm, RCM, 'month', 'Relative humidity (%)','eval',0,'southeast')
+mf_plot_seascycle(rh_seas_month,HURS_seas_month,' ', nm, RCM, 'month', 'Relative Humidity (%)','eval',0,'southeast')
 ylim([60 95])
 
 ax = mf_subtightplot(2,2,4,[0.1,0.1],[0.05,0.05],[0.08,0.18])
-mf_plot_seascycle(sfcWind_seas_month,SFCWIND_seas_month,'Mean Surface Wind', nm, RCM, 'month', 'Wind (mm/s)','eval',1,'northeast')
+mf_plot_seascycle(sfcWind_seas_month,SFCWIND_seas_month,' ', nm, RCM, 'month', 'Surface Wind (m/s)','eval',0,'northeastoutside')
 ylim([2 7])
 
+% save figure
+filename = strcat('seascycle_all');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\paper'; 
+print(fullfile(pathname, filename),'-dtiff','-r1000')
+
+%%
+figure()
+mf_plot_seascycle(tasmin_seas_month,TASMIN_seas_month,'Minimum daily air temperature', nm, RCM, 'month', 'Temperature (K)','eval',1,'south')
 
 %%
 figure()

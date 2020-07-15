@@ -51,8 +51,8 @@ plot(GMTlevels, diag_temp_30(np,:), 'LineWidth', 1.5, 'Color', cmap(4,:))
 plot(GMTlevels, diag_temp_10(np,:), 'LineWidth', 1.5, 'Color', cmap(5,:))
 plot(GMTlevels, diag_temp_20(np,:), 'LineWidth', 1.5, 'Color', cmap(6,:))
 title('\Delta T', 'Color', axcolor)
-ylabel('\Delta temperature [°C]')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+ylabel('\Delta Air Temperature (^{\circ}C)')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
@@ -67,8 +67,8 @@ plot(GMTlevels, diag_temp_30(np,:), 'LineWidth', 1.5, 'Color', cmap(4,:))
 plot(GMTlevels, diag_temp_10(np,:), 'LineWidth', 1.5, 'Color', cmap(5,:))
 plot(GMTlevels, diag_temp_20(np,:), 'LineWidth', 1.5, 'Color', cmap(6,:))
 title('\Delta TXx', 'Color', axcolor)
-ylabel('\Delta temperature [°C]')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+ylabel('\Delta Air Temperature (^{\circ}C)')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
@@ -84,8 +84,8 @@ plot(GMTlevels, diag_temp_30(np,:), 'LineWidth', 1.5, 'Color', cmap(4,:))
 plot(GMTlevels, diag_temp_10(np,:), 'LineWidth', 1.5, 'Color', cmap(5,:))
 plot(GMTlevels, diag_temp_20(np,:), 'LineWidth', 1.5, 'Color', cmap(6,:))
 title('\Delta TNn', 'Color', axcolor)
-ylabel('\Delta temperature [°C]')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+ylabel('\Delta Air Temperature (^{\circ}C)')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
@@ -100,9 +100,9 @@ plot(GMTlevels, diag_temp_30(6,:), 'LineWidth', 1.5, 'Color', cmap(4,:))
 plot(GMTlevels, diag_temp_10(6,:), 'LineWidth', 1.5, 'Color', cmap(5,:))
 plot(GMTlevels, diag_temp_20(6,:), 'LineWidth', 1.5, 'Color', cmap(6,:))
 
-title('\Delta  Summer days', 'Color', axcolor)
-ylabel('\Delta days')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+title('\Delta  Summer Days', 'Color', axcolor)
+ylabel('\Delta Days')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
@@ -117,13 +117,13 @@ plot(GMTlevels, diag_temp_2(np,:), 'LineWidth', 1.5, 'Color', cmap(3,:))
 plot(GMTlevels, diag_temp_30(np,:), 'LineWidth', 1.5, 'Color', cmap(4,:))
 plot(GMTlevels, diag_temp_10(np,:), 'LineWidth', 1.5, 'Color', cmap(5,:))
 plot(GMTlevels, diag_temp_20(np,:), 'LineWidth', 1.5, 'Color', cmap(6,:))
-title('\Delta Frost days', 'Color', axcolor)
-ylabel('\Delta days')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+title('\Delta Frost Days', 'Color', axcolor)
+ylabel('\Delta Days')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
-xlabel('GMT anomaly')
+xlabel('GMT anomaly (^{\circ}C)')
 
 
 
@@ -137,13 +137,16 @@ plot(GMTlevels, diag_temp_30(4,:), 'LineWidth', 1.5, 'Color', cmap(4,:))
 plot(GMTlevels, diag_temp_10(4,:), 'LineWidth', 1.5, 'Color', cmap(5,:))
 plot(GMTlevels, diag_temp_20(4,:), 'LineWidth', 1.5, 'Color', cmap(6,:))
 title('\Delta Growing season length', 'Color', axcolor)
-ylabel('\Delta days')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+ylabel('\Delta Days')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
-xlabel('GMT anomaly')
+xlabel('GMT anomaly (^{\circ}C)')
 
+filename = strcat('temp_period_gradient');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\paper'; 
+print(fullfile(pathname, filename),'-dtiff','-r1000')
 
 
 %% plot precipitataion diagnostics
@@ -168,8 +171,8 @@ plot(GMTlevels, diag_pr_30(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(4,:))
 plot(GMTlevels, diag_pr_10(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(5,:))
 plot(GMTlevels, diag_pr_20(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(6,:))
 title('\Delta PRCTOT', 'Color', axcolor)
-ylabel('\Delta precipitation [mm]')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+ylabel('\Delta Precipitation [mm]')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
@@ -185,10 +188,10 @@ plot(GMTlevels, diag_pr_30(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(4,:))
 plot(GMTlevels, diag_pr_10(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(5,:))
 plot(GMTlevels, diag_pr_20(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(6,:))
 title('\Delta Rx1day', 'Color', axcolor)
-ylabel('\Delta precipitation [mm]')
-legend('1-year period','2-year period', '5-year period','10-year period','20-year period', 'Location','northwest','Fontweight', 'normal','Box','off','Fontsize', 9, 'Color', axcolor)
+ylabel('\Delta Precipitation [mm]')
+%legend('1-year period','2-year period', '5-year period','10-year period','20-year period', 'Location','northwest','Fontweight', 'normal','Box','off','Fontsize', 9, 'Color', axcolor)
 
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
@@ -208,8 +211,8 @@ plot(GMTlevels, diag_pr_30(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(4,:))
 plot(GMTlevels, diag_pr_10(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(5,:))
 plot(GMTlevels, diag_pr_20(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(6,:))
 title('\Delta R10mm', 'Color', axcolor)
-ylabel('\Delta days')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+ylabel('\Delta Days')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
@@ -227,13 +230,13 @@ plot(GMTlevels, diag_pr_30(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(4,:))
 plot(GMTlevels, diag_pr_10(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(5,:))
 plot(GMTlevels, diag_pr_20(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(6,:))
 title('\Delta CDD', 'Color', axcolor)
-ylabel('\Delta days')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+ylabel('\Delta Days')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
 ylim([-5 20])
-xlabel('GMT anomaly')
+xlabel('GMT anomaly (^{\circ}C)')
 
 
 
@@ -249,10 +252,36 @@ plot(GMTlevels, diag_pr_10(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(5,:))
 plot(GMTlevels, diag_pr_20(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(6,:))
 
 title('\Delta CWD', 'Color', axcolor)
-ylabel('\Delta days')
-set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0°' '+1°', '+1.5°', '+2°', '+3°', '+4°'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+ylabel('\Delta Days')
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 grid on
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
 set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
-xlabel('GMT anomaly')
+xlabel('GMT anomaly (^{\circ}C)')
 ylim([-6 6])
+
+filename = strcat('precip_period_gradient');
+pathname = 'C:\Users\ivand\Documents\ecotrons\scripts\matlab\plots\paper'; 
+print(fullfile(pathname, filename),'-dtiff','-r1000')
+
+%%
+% Legend
+figure
+plot(GMTlevels, diag_pr_1(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(2,:))
+hold on
+plot(GMTlevels, diag_pr_2(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(3,:))
+plot(GMTlevels, diag_pr_30(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(4,:))
+plot(GMTlevels, diag_pr_10(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(5,:))
+plot(GMTlevels, diag_pr_20(np,:), 'LineWidth', 1.5, 'Color', cmap_pr(6,:))
+title('\Delta Rx1day', 'Color', axcolor)
+ylabel('\Delta precipitation [mm]')
+legend('1-year period','2-year period', '5-year period','10-year period','20-year period', 'Location','northwestoutside','Fontweight', 'normal','Box','off','Fontsize', 9, 'Color', axcolor)
+
+set(gca,'XTick',[0 1 1.5 2 3 4], 'XTickLabel', {'+0' '+1', '+1.5', '+2', '+3', '+4'},'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+grid on
+set(gca,'Fontsize', 10, 'Fontweight', 'Bold','xcolor', axcolor)
+set(gca,'Fontsize', 10, 'Fontweight', 'Bold','ycolor', axcolor)
+ylim([-4 10])
+
+filename = strcat('precip_period_gradient_legend');
+print(fullfile(pathname, filename),'-dtiff','-r1000')

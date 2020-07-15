@@ -71,8 +71,10 @@ hold off
 % plot characteristics
 
 if flg_legend == 1
-RCM{10,1}='Observations';
+RCM{19,1}='Observations';
 legend(RCM,'Box','Off')   
+%legend(RCM,'Reference')   
+
 set(legend,'Fontweight', 'Bold', 'Fontsize', 10, 'TextColor', axcolor,'Location',loc_legend);
 end
 

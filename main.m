@@ -5,14 +5,14 @@
 
 % flags
 
-flags.eval = 1;               % do evaluation of reanalysis
+flags.eval = 0;               % do evaluation of reanalysis
 flags.hist = 0;               % do GCM downscaling evaluation
-flags.rcp85 = 0;              % do analysis on future projections
+flags.rcp85 = 1;              % do analysis on future projections
 flags.forcing = 0;            % do analysis on simulation serving as ecotron forcing
 flags.plotting = 1;           % do plotting
 
 % initialisation 
-addpath(genpath('/home/inne/documents/sideprojects/ecotrons/scripts/2019_Vanderkelen_etal_MEE/')); 
+addpath(genpath('C:\Users\ivand\Downloads\Documents\ecotrons\scripts\2019_Vanderkelen_etal_BG\')); 
 
 
 
@@ -49,7 +49,7 @@ if flags.hist == 1
     if flags.plotting == 1
         
         % fig 6
-        plot_rank_hist_paper; 
+        %plot_rank_hist_paper; 
 
         % fig A1   
         plot_seas_cycle_hist; % plot seasonal cycle
@@ -79,17 +79,18 @@ end
     
 
 % other plots 
+if flags.forcing ~= 1;
 
-if flags.plotting==1
-   
-   % fig 3
-   plot_statdata;
-   
-   % fig 7
-   plot_rank_physval_paper;
+    if flags.plotting==1
 
+       % fig 3
+       plot_statdata;
+
+       % fig 7
+       plot_rank_physval_paper;
+
+    end
 end
-
 
 
 % CCLM-EC-EARTH: determination and extraction of ecotron periods
@@ -98,7 +99,7 @@ if flags.forcing ==1
     
     main_forcing; 
   
-    if flag.plotting == 1
+    if flags.plotting == 1
     
         % fig 1  
         plot_GMT_conc;
