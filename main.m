@@ -1,5 +1,5 @@
 % ------------------------------------------------------------------------
-% Main script of the Vanderkelen et al (2019) paper 
+% Main script of the Vanderkelen et al (2020) paper 
 
 
 
