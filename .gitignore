@@ -1,2 +1,6 @@
 prep_data_for_Francois/
 data/
+functions/cpt-city/
+functions/export_fig/
+functions/sgsdf/
+functions/spear.m

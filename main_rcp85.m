@@ -9,9 +9,6 @@ clearvars -except flags
 close all
 ms_inicon
 
-% add matlab scripts to directory path
-addpath(genpath('/home/inne/documents/sideprojects/ecotrons')); 
-
 
 RCM(:,1) = [{'CCLM4-8-17'};  {'CCLM4-8-17'}; {'CCLM4-8-17'}; {'CCLM4-8-17'}; ...
 {'ALADIN53'};...

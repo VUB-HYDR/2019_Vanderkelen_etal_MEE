@@ -7,10 +7,6 @@ clearvars -except flags
 close all
 
 
-% add matlab scripts to directory path
-addpath(genpath('/home/inne/documents/sideprojects/ecotrons')); 
-addpath(genpath('/home/inne/documents/MATLAB/export_fig/'));
-
 % initialisation
 
 ms_inicon

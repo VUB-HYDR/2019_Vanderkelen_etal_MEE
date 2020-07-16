@@ -5,14 +5,14 @@
 
 % flags
 
-flags.eval = 0;               % do evaluation of reanalysis
+flags.eval = 1;               % do evaluation of reanalysis
 flags.hist = 0;               % do GCM downscaling evaluation
-flags.rcp85 = 1;              % do analysis on future projections
+flags.rcp85 = 0;              % do analysis on future projections
 flags.forcing = 0;            % do analysis on simulation serving as ecotron forcing
 flags.plotting = 1;           % do plotting
 
 % initialisation 
-addpath(genpath('C:\Users\ivand\Downloads\Documents\ecotrons\scripts\2019_Vanderkelen_etal_BG\')); 
+addpath(genpath('C:\Users\ivand\Documents\ecotron_copy_to_check\2020_Vanderkelen_etal_IJBM')); 
 
 
 
