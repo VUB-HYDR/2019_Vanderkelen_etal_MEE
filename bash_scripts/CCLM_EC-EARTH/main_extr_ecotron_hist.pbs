@@ -1,0 +1,49 @@
+
+ 
+#!/bin/bash
+
+
+  # "name" of the job (optional)
+        
+
+
+  # requested running time (required!)
+#PBS -l walltime=04:00:00
+
+  # specification (required!)
+  #   nodes=   number of nodes; 1 for serial; 1 or more for parallel
+  #   ppn=     number of processors per node; 1 for serial
+  #   mem=     memory required
+#PBS -l nodes=1:ppn=1
+#PBS -l mem=16gb
+
+  # send mail notification (optional)
+  #   a        when job is aborted
+  #   b        when job begins
+  #   e        when job ends
+  #   M        your e-mail address (should always be specified)
+#PBS -m e
+#PBS -M ivdkelen@vub.ac.be
+
+
+  # redirect standard output (-o) and error (-e) (optional)
+  # if omitted, the name of the job (specified by -N) or
+  # a generic name (name of the script followed by .o or .e and 
+  # job number) will be used
+#PBS -o stdout
+#PBS -e stderr
+
+# load matlab module
+module load MATLAB
+
+  # go to the (current) working directory (optional, if this is the
+  # directory where you submitted the job)
+cd $PBS_O_WORKDIR  
+
+
+  # the program itself
+echo Start Job
+date
+hostname
+./extr_ecotron_hist.sh
+echo End Job
