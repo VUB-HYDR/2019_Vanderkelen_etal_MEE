@@ -17,4 +17,4 @@ This project is licensed under the MIT License. See also the
 file.
 
 ## References
-Vanderkelen, I., Zschleischler, J., Gudmundsson, L., Keuler, K., Rineau, F., Beenaerts, N., Vangronsveld, J., Thiery, W. A novel method for assessing climate change impacts in ecotron experiments, International Journal of Biometeorology, 2020, in press.   
+Vanderkelen, I., Zschleischler, J., Gudmundsson, L., Keuler, K., Rineau, F., Beenaerts, N., Vangronsveld, J., Thiery, W. A novel method for assessing climate change impacts in ecotron experiments, International Journal of Biometeorology, 2020, https://doi.org/10.1007/s00484-020-01951-8  
